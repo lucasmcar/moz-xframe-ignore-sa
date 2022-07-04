@@ -1,0 +1,94 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container
+{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    box-sizing: border-box;
+    width: 400px;
+    position: relative;
+}
+
+.ext-header
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(244, 244, 250);
+    margin-bottom: 16px;
+    margin-left: 0;
+    width: 100%;
+    margin-right: 0;
+    padding: 8px;
+}
+
+.ext-header-nome
+{
+    color: rgb(28, 27, 27);
+    font-weight: 700;
+}
+
+/* The switch - the box around the slider */
+input[type=checkbox]{
+	height: 0;
+	width: 0;
+	visibility: hidden;
+}
+
+label {
+	cursor: pointer;
+	text-indent: -9999px;
+	width: 50px;
+	height: 30px;
+	background: #517be6;
+	display: block;
+	border-radius: 100px;
+	position: relative;
+    margin-bottom: 16px;
+}
+
+label:before {
+	content: '';
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	width: 20px;
+	height: 20px;
+	background: #fff;
+	border-radius: 90px;
+	transition: 0.3s;
+}
+
+input:not(:checked) + label{
+  background: #517be6;
+}
+
+input:checked + label {
+	background: grey;
+}
+
+input:not(:checked) + label:before {
+	right: calc(100% - 5px);
+	transform: translateX(100%);
+}
+
+label:active:before {
+	width: 25px;
+}
+  
+
+.switch-container
+{
+  display: flex;
+  padding: 8px;
+  flex-direction: row;
+  justify-items: center;
+  width: 250px;
+  justify-content: space-around;
+}
